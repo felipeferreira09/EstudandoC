@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(void) {
+  // printf("Hello World\n");
+  printf("Digite a LarguraTerreno:");
+  int LarguraTerreno;
+  scanf("%d", &LarguraTerreno);
+
+  float PcTerreno, PcCasa, PcGeral, PcFinal;
+
+  printf("Digite a ComprimentoTerreno:");
+  int ComprimentoTerreno;
+  scanf("%d", &ComprimentoTerreno);
+
+  printf("Digite a LarguraCasa:");
+  int LarguraCasa;
+  scanf("%d", &LarguraCasa);
+
+  printf("Digite a LarguraCasa:");
+  int ComprimentoCasa;
+  scanf("%d", &ComprimentoCasa);
+
+  int MetrosCasa = LarguraCasa * ComprimentoCasa;
+
+  int MetrosTerreno = LarguraTerreno * ComprimentoTerreno;
+
+  printf("\nMetros quadrados terreno = %d", MetrosTerreno);
+
+  printf("\nMetros quadrados casa = %d\n", MetrosCasa);
+
+  int AreaLivre = MetrosTerreno - MetrosCasa;
+  printf("Area livre do terreno: %d\n", AreaLivre);
+
+  PcTerreno = MetrosTerreno / 100;
+  PcCasa = MetrosCasa / 100;
+  PcGeral = PcTerreno - PcCasa;
+  PcFinal = PcGeral * 10;
+  printf("Porcentagem area livre do terreno: %f", PcFinal);
+}
